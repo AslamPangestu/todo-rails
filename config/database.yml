@@ -13,13 +13,13 @@ default: &default
   adapter: mysql2
   encoding: utf8mb4
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  username: root
-  password:
-  host: <%= ENV.fetch("DB_HOST") { "localhost" } %>
+  username: <%= Rails.application.credentials.db[:username] %>
+  password: <%= Rails.application.credentials.db[:password] %>
+  host: <%= Rails.application.credentials.db[:host] %>
+  database: <%= Rails.application.credentials.db[:name] %>
 
 development:
   <<: *default
-  database: todo_rails_development
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -50,6 +50,3 @@ test:
 #
 production:
   <<: *default
-  database: todo_rails_production
-  username: todo_rails
-  password: <%= ENV["TODO_RAILS_DATABASE_PASSWORD"] %>
