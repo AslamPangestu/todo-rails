@@ -1,12 +1,19 @@
-<div id="<%= dom_id note %>">
-  <p>
-    <strong>Description:</strong>
-    <%= note.description %>
-  </p>
-
-  <p>
-    <strong>Completed:</strong>
-    <%= note.completed %>
-  </p>
-
-</div>
+<% if note.completed %>
+<tr class="table-success">
+  <td class="striketrhough"><%= note.description %></td>
+  <td>
+  <%= link_to "Show", note %> | 
+  <%= link_to "Edit", edit_note_path(note) %> | 
+  <%= link_to "Destroy", note, method: :delete, data:{confirm:'Are you sure?'} %>
+  </td>
+</tr>
+<% else %>
+<tr>
+  <td><%= note.description %></td>
+  <td>
+  <%= link_to "Show", note %> | 
+  <%= link_to "Edit", edit_note_path(note) %> | 
+  <%= link_to "Destroy", note, method: :delete, data:{confirm:'Are you sure?'} %>
+  </td>
+</tr>
+<% end %>

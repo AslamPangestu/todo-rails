@@ -34,6 +34,10 @@ gem "bootsnap", require: false
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
 
+gem "bootstrap", "~> 5.2", ">= 5.2.3"
+gem "autoprefixer-rails", "~> 10.4"
+gem "dartsass-rails", "~> 0.5.1"
+
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri windows ], require: "debug/prelude"
@@ -55,3 +59,5 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
 end
+
+gem "jquery-rails", "~> 4.6"
