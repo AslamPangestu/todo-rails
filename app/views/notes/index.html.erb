@@ -2,9 +2,8 @@
 
 <% content_for :title, "Notes" %>
 
-<h1>Notes</h1>
-
-<%= render "form", note: @note %>
+<%= link_to "New note", new_note_path, class: 'btn btn-primary' %>
+<br/>
 <br/>
 
 <table class="table table-bordered">
@@ -16,4 +15,3 @@
 
   </table>
 
-<%= link_to "New note", new_note_path, class: 'btn btn-primary' %>
