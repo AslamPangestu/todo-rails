@@ -2,14 +2,14 @@
 <tr class="table-success">
   <td class="striketrhough"><%= link_to note.description, edit_note_path(note) %></td>
   <td>
-    <center><%= link_to "Delete", note, method: :delete, data:{confirm:'Are you sure?'} %></center>
+    <center><%= link_to "Delete", note, class: 'btn btn-outline-danger', data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } %></center>
   </td>
 </tr>
 <% else %>
 <tr>
   <td><%= link_to note.description, edit_note_path(note) %></td>
   <td>
-    <center><%= link_to "Delete", note, method: :delete, data:{confirm:'Are you sure?'} %></center>
+    <center><%= link_to "Delete", note, class: 'btn btn-outline-danger', data: { turbo_method: :delete, turbo_confirm: "Are you sure?"} %></center>
   </td>
 </tr>
 <% end %>

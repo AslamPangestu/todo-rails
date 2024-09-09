@@ -2,10 +2,6 @@
 
 <% content_for :title, "Notes" %>
 
-<%= link_to "New note", new_note_path, class: 'btn btn-primary' %>
-<br/>
-<br/>
-
 <table class="table table-bordered">
   <tbody>
     <% @notes.each do |note| %>
@@ -15,3 +11,12 @@
 
   </table>
 
+<%= link_to "Delete Completed Items", home_trash_em_path, class:'btn btn-danger',data: {
+    turbo_method: :get,
+    turbo_confirm: "Are you sure?"
+  } %>
+
+  <%= link_to "Delete All Items", home_trash_em_all_path, class:'btn btn-danger',data: {
+    turbo_method: :get,
+    turbo_confirm: "Are you sure?"
+  } %>

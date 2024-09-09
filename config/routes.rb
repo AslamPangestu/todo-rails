@@ -12,4 +12,6 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   root "notes#index"
+  get "home/trash_em"
+  get "home/trash_em_all"
 end
