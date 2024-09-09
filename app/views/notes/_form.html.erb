@@ -1,3 +1,7 @@
+<center>
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+
 <%= form_with(model: note) do |form| %>
   <% if note.errors.any? %>
     <div style="color: red">
@@ -11,17 +15,15 @@
     </div>
   <% end %>
 
-  <div>
-    <%= form.label :description, style: "display: block" %>
-    <%= form.text_field :description %>
+  <div class="fprm-group">
+  Add New Todo<br/>
+    <%= form.text_field :description, class: 'form-control' %>
   </div>
-
   <div>
-    <%= form.label :completed, style: "display: block" %>
-    <%= form.check_box :completed %>
-  </div>
-
-  <div>
-    <%= form.submit %>
+    <%= form.submit "Add Todo" %>
   </div>
 <% end %>
+  </div>
+</div>
+
+</center>

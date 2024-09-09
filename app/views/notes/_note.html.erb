@@ -1,19 +1,15 @@
 <% if note.completed %>
 <tr class="table-success">
-  <td class="striketrhough"><%= note.description %></td>
+  <td class="striketrhough"><%= link_to note.description, edit_note_path(note) %></td>
   <td>
-  <%= link_to "Show", note %> | 
-  <%= link_to "Edit", edit_note_path(note) %> | 
-  <%= link_to "Destroy", note, method: :delete, data:{confirm:'Are you sure?'} %>
+    <center><%= link_to "Delete", note, method: :delete, data:{confirm:'Are you sure?'} %></center>
   </td>
 </tr>
 <% else %>
 <tr>
-  <td><%= note.description %></td>
+  <td><%= link_to note.description, edit_note_path(note) %></td>
   <td>
-  <%= link_to "Show", note %> | 
-  <%= link_to "Edit", edit_note_path(note) %> | 
-  <%= link_to "Destroy", note, method: :delete, data:{confirm:'Are you sure?'} %>
+    <center><%= link_to "Delete", note, method: :delete, data:{confirm:'Are you sure?'} %></center>
   </td>
 </tr>
 <% end %>

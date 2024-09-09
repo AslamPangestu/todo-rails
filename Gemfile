@@ -37,6 +37,7 @@ gem "bootsnap", require: false
 gem "bootstrap", "~> 5.2", ">= 5.2.3"
 gem "autoprefixer-rails", "~> 10.4"
 gem "dartsass-rails", "~> 0.5.1"
+gem "jquery-rails", "~> 4.6"
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
@@ -59,5 +60,3 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
 end
-
-gem "jquery-rails", "~> 4.6"

@@ -1,8 +1,11 @@
-<p style="color: green"><%= notice %></p>
+<%= render 'flash' %>
 
 <% content_for :title, "Notes" %>
 
 <h1>Notes</h1>
+
+<%= render "form", note: @note %>
+<br/>
 
 <table class="table table-bordered">
   <tbody>
